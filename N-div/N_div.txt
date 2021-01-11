@@ -1,0 +1,22 @@
+Prerequisite: segmented sieve,finding divisor of a number in sqrt(n) time
+Observation:
+->we have to find n divisor number 
+->in given range [a........b]
+->where n divisor number is a number which have n divisor
+->we will precompute number of divisor of every number in given range[a........b]
+->then if the number of divisors is equal to N we increment the count 
+and that will be our answer
+
+Implementation:
+->precompute number of divisors using below method
+->  we ran a outer loop from [1...... sqrt(b)] 
+-> and inner loop will all   (X/i)  and find X where X can be [a........b] and X=(i*(j/i))
+
+->if(X/i) is less than sqrt(b) then we increment the cnt[X] by one because
+X=(i*(X/i)) so we need unique X   i=2 and (X/i)==4,
+ here,X=(i*(X/i)) =(2*4)=8
+again  i=4 and (X/i) =2 so multiply (i*(X/i)) will give 8 again 
+so avoid this over counting we should check that (X/i) should be greater than sqrt(b) or it will count twice
+
+->else cnt[X] increment by 2 
+
