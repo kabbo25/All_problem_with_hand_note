@@ -1,0 +1,14 @@
+observation:
+->we have find gcd(A,M)==gcd(A+X,M) where X[0......M-1]
+->so gcd(A+X,M)=g where g is gcd(A,M)
+->here Y=A+X so gcd(Y,M)=g divide the equation by g
+->gcd(Y/g,M/g)=1 we have find all the relative prime to (M/g)
+-> we know euler  phi(M/g) is number of relative prime 
+->and that will be our answer
+ phi(X)= product of all primes p divides X
+       =product of(1-(1/p)) where p is all prime that divides X
+
+Implementation:
+->sieve all primes up 10^5
+->and find euler phi function of (M/g) by using formula
+->that will our answer
