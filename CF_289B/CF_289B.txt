@@ -1,0 +1,12 @@
+observation:
+-> first of all we can change by d 
+->make every element equal to same in minimum number of operations
+-> example:
+2 2 2
+2 4
+6 8
+->finding median and check the difference ,if difference is multiple of d then we can make it,other wise not.
+Implementation:
+first of all sort the array then finding the median ,then find the absolute difference and divide it by k
+
+
