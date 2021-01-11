@@ -1,0 +1,18 @@
+observation:
+->i have to delete all adjacent elements
+->count all the adjacent numbers
+->if count[a.....z] is even delete all
+->else add one character of this
+example:abbbaa
+first count of [a] is 1 so add it
+      count of [b] is 3 add one b
+      count of [a] is 2 add nothing
+   so new string will be ab
+and that is our answer
+
+Implementation:
+->traverse the string and  count all occurance
+->until we reach all adjacent unique elements
+->we run one infinite while loop and flag
+->flag will be true if there is no adjacent element and break the loop and 
+print the answer
