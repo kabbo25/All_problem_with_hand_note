@@ -2,7 +2,7 @@ Observation:
 ->it is classical sell and buy stock problem ,we have to maximize the profit
 ->give a direct acyclic graph and  weight of the edges 
 -> we have to buy some stock in one city and sell in another city optimally
-->here dp[i] represent that if we have stock at city i what will be the maximum selling price 
+->here dp[i] represent maximum price among all adjacent node to i
 ->then profit will be buying price which is weight of edge A[i]
 ->profit =(dp[i]-A[i]) for all city
 -> and maximum will be the answer
