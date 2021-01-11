@@ -1,0 +1,18 @@
+Observation:
+->it is classical sell and buy stock problem ,we have to maximize the profit
+->give a direct acyclic graph and  weight of the edges 
+-> we have to buy some stock in one city and sell in another city optimally
+->here dp[i] represent that if we have stock at city i what will be the maximum selling price 
+->then profit will be buying price which is weight of edge A[i]
+->profit =(dp[i]-A[i]) for all city
+-> and maximum will be the answer
+
+
+
+Implementation:
+->fist do dfs and store all maximum selling stock for particular node
+-> then traverse the city and take maximum selling stock among all adjacent city 
+and subtract from cost of ith city formally
+profit =(dp[j]-cost[i]) where j will all adjacent node to i
+->maximum among all city will be our answer
+->note: answer can be negetive and we have to buy some stock and sell some stock
