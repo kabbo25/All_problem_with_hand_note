@@ -1,0 +1,14 @@
+Observation:
+-> we have count all the numbers have digit 0 or 1 less than equal N
+->example:if N is 11
+then 1,10,11 these 3 numbers have only digit 0 or 1 so answer will be 3
+->so if N is 534 then we have _ _ _ 3 digit place 
+-> we will try all possible combination by placing 0 and 1 every postion 
+->and generate a number if number is less than N then count will increase by 1
+
+Implementation:
+->we will start dfs by 1 until 1e9
+->we will shift digit place by  multiply the number by 10
+->like if number is 10 multiply 10 it will become 100 we shift the number from 2 digit to three digit 
+->another dfs will add 1 to digit place 
+->that's how we will generate all possible number which containing only 1 or 0
