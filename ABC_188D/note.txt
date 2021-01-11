@@ -1,0 +1,13 @@
+Observation:
+->given N task with given range and we have to pay in these days
+-> we have two payement method either pay C yen per day
+->or pay for individual task with cost of C0,C1......CN
+-> Now we have greedily choose between payment method 1 or 2 which minimum for that day
+-> and total cost will be our answer
+
+Implementation:
+->we will use prefix sum to calculate sum of all individual task cost in ith day 
+->traverse through all days in given range and 
+take the minimum of payment method 1 or 2 
+and add to sum
+->sum will be answer which is minimum
