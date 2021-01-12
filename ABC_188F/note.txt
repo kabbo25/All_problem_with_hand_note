@@ -1,0 +1,25 @@
+observation:
+->we have two numbers X and  Y we have to X from Y by following operation:
+->either increase by one 
+->decrease by one 
+->multiply by one
+we have to find minimum number of operation
+because X and Y is very big we cannot do bfs simply 
+we have to use dynamic programing 
+-> we think it backward from Y to X
+->key things to note hear maximum answer will be |Y-X| so its always possible to make from X to Y
+-> if Y is even we can divide it by two which is faster to move rather than decrease one by one 
+-> but we use dynamic programming so we try both method if Y is even
+-> if we try to decrease by one then answer will be |Y-X|
+->so if Y is even we can get min(Y/2, |Y-X|)
+-> but is Y is odd we can make it even by substract one or add one and then apply first method
+
+->key thing is we have to make Y even and try to divide it by two as much as possible
+
+
+
+Implementation:
+->here X and Y is so big ,so we use map for dp
+->do simple recursion using above recurrance formula
+->base case will be if (X>Y) then divide it by two make it more worse so we just return (X-Y)
+-> after doing these minimum will be our answer 
