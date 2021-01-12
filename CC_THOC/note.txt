@@ -1,0 +1,19 @@
+Observation:
+->we have given a array we have choose  two continuos segment 
+so that their sum will be maximum
+->more formally we have choose
+two indices i and j where 
+where i indicates that maximum continuos sum we get till i from first index and  j indicate maximum continuos sum from j to N
+
+->we actually we have find maximum
+prefix continuos sum which end at i and maximum suffix continuos sum which starts from  j till N
+
+->all all indices i[1.....N-1]
+we take prefix sum(i) +suffix sum (i+1)
+and take maximum of it
+
+
+Implementation:
+->precompute prefix  sum and suffix sum using kadane's algorithm
+->traverse through all i and take sum of prefix + suffix sum
+->maximum of among them will be our answer
