@@ -1,0 +1,17 @@
+Observation:
+-> A robot can move in any four direction in one step  in 2d plane or stay in that cell
+->But he can't move in the same direction more than once
+->we have to find minimum number of steps to reach from (0,0)->(x,y)
+->the key idea here is  we move one step in x direction and one step in y direction 
+->if we ran out of any direction then we will take two step to move in that direction so that we don't have to perform same operation twice
+
+example: if x=3, and y=5
+->first move in x direction then in y so on ... we reach (3,3) in 6 alternative steps  but there are remaining  2 y direction, we move first up then stay then again up 
+->so need 3 steps more and  so total step will be (6+3)==9
+->so if we have n steps left then we have to stay (n-1) stay so that no moves occur twice
+
+Implementation:
+->first ans=min(x,y) in these steps we move alternatively
+->then rem=|x-y| 
+->we add rem and rem-1 steps 
+->sum of all steps will be our answer
