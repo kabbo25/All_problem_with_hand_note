@@ -1,0 +1,13 @@
+Observation:
+->there will be one string consisting of ("(" ,")","[","]");
+->In one move we can remove one right bracket sequence greedily 
+-> we perform this move  till string have (RBS) bracket sequence 
+->maximum number of move we can play will be our answer
+
+->we can observe that if ("(") occurs before (")")we can remove it
+Implementation:
+->first we solve for first bracket and then for second bracket
+->if first bracket occurs we increase the cnt and if left bracket occurs we will decrease cnt and increase the answer
+->but we have to take care of that thing is that is (cnt<=0) and left bracket occur we don't icrease the answer because that will break above condition
+
+
