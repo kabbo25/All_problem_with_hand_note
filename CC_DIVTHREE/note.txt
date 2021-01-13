@@ -1,0 +1,14 @@
+Observation:
+->there is N problem setters and each one can create Ai problems
+->To organize one div3 contest we need K problems
+
+->sum of all Ai will be our total problems
+
+->number of div3 contest we can organize is (sum/k)
+
+->but we can do maximum D constest 
+->if we have problem so we can organize more than D contest ,then answer will D 
+Implementation:
+->sum will be sum of all array elements 
+->ans will sum/k
+->ans will be minimum of( ans,D)
