@@ -1,0 +1,46 @@
+Observation:
+->we have given three bags and we have to pick something from one bag and pick something from another bag 
+and subtract this and put into first bag element with this new subtraction value
+->we have repeat this process until their remain one element ,we have to find maximum element 
+
+->first we think there is only one bag and elements are suppose
+[a,b,c,d,e,f] in sorted order
+from first element we subtract every element until there is only two element left then our first bag will be like this
+[a-b-c-d-e,f] now we reverse the process we subtract first element with last element[f-(a-b-c-d-e)]
+last element will be[f+b+c+d+e-a] and
+we know that a is minimum element so our sum will be maximum if u generize this formula for one bag then 
+    it will be (sum-2*min_element) where sum is sum of all element of the bag
+
+
+->we apply this method to three bag 
+but we cannot subtract element from same bag but we do some trick
+if first bag has element [a,b,c]
+second bag has element[e,f,g]
+and third bag has element[h,i,j] in sorted order
+
+we apply method and formula(sum-2*min_element) but suppose minimum element from bag 1 , so we can not subtract other two element
+
+
+our new configuration look like this
+first bag[e+f+g+h+i-a,b,c]
+third bag [j] we left j because first bag has [b,c] we have take care of that we use second minimum element and apply first method
+so our new configuration will be
+[e+f+g+i+b+c-a-j] where we assume j is second minimum element
+
+but there is one corner case that 
+if sum of two minimum element is greater that sum of all elements of one bag from three of them then we take minimum of them
+
+
+
+
+Implementation:
+->sort the three bags element 
+
+->find first minimum and second minimum and minimum sum of bags all elements
+
+->apply the formula 
+
+(sum of three bags - 2*min(sum of two minimum,minimum sum of one bag ))
+
+
+->it will be our answer
