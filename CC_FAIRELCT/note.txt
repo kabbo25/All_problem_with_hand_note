@@ -1,0 +1,19 @@
+Observe:
+->there is two candidates in final election
+->one person can vote one candidate
+->for every candidate there is N packs and every packs has Ai amount of votes
+
+->In one step we can swap candidate votes so that candidate one can win
+->we have print minimum numbers of swap needed
+
+->we can sort both candidate vote array
+->take the minimum amount of vote and swap with maximum number of vote of second candidate
+
+->repeat the process until the candidate one win  or print -1
+
+Implementation:
+->sort the both array one increasingly and one decreasingly 
+->use prefix sum to calculate total votes and when swap values 
+we subtract a[i] from prefix sum and add b[i] to it 
+->repeat this process until one candidate win
+->or print -1
