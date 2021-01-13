@@ -1,0 +1,16 @@
+Observe:
+->there is 4 bits numbers[2^4-1]decimal numbers 
+so we have [0.......15] and each number assigned to a character [a.....p]
+example:a->1,b->2,c->3........p->15
+->Now for a given binary string we have to decode that string
+
+example:00001111 here first four character is (0000) which equal 0 and equivalent character is a 
+->next four character is(1111) equivalent character is p
+so final string will be ap
+
+
+Implementation:
+->map character with number
+->take four digit binary and convert it to decimal and print equivalent decimal character of that number
+
+and final string will be our answer
