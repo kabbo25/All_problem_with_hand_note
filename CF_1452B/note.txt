@@ -1,0 +1,33 @@
+Observe:
+->we have n boxes and ith box has ai blocks
+->choose any box i and move all his elements to other boxes
+->we need same number of element in every boxes 
+->we can put some extra blocks to satisfy the above condition
+
+->we have to find minimum number of extra element we need to add
+->example:
+3
+3 2 2
+->here first key observation is that for every i (1<=i<=n) we remove the element of a[i] and add this number to other element
+
+->because we remove one element every time lenght of our array always decrease by one or it will be (n-1)
+
+->second key observation is if every element is equal then sum of array will be
+(length of array *first element of array) or (n-1*max_element of array)
+cause every element have to be atleast max_element coz we only increase the number
+no decrease operation allowed
+
+
+->first conditon will be sum of array =(n-1)*(max_element_of_an_array) 
+
+->second condition will be sum of array have to divisible by (n-1) otherwise it will never possible to make every element equal 
+
+->third key observation is we never remove any element we actually shift the element so total sum of array never change
+->like [3,2,2] sum is 7 for i=1 we shift 3 and array will become[5,2] length decrease but sum if  always 7
+
+
+
+Implementation:
+->first set the sum equal (n-1)*max_element_of_array
+->then increase the sum until it is divisible by (n-1)
+->then ( new sum -orginal sum) will be our change we made and that is minimum 
