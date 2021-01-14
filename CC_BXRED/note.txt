@@ -1,0 +1,24 @@
+Observation:
+->we have N boxes and size of every boxes is a[i]
+->we have to fit all the boxes in tiny room 
+->we can put ith box into the jth box
+if(2*a[i]<=j)
+->we have to minimize the number of boxes remain in ground
+
+->n is (5*10^5) we have solve this problem in nlong time
+->first observation is maximum number of boxes in ground we can place is n and minimum number of element we can is 1
+
+->we use binary search to solve this problem  and if we place mid amount of boxes in ground then we make 
+high=mid-1 and reduce the search space and try to reduce the answer
+
+->here we choose greedily that sort the array decreasingly and try to put mid amount of element in the ground
+
+
+Implementation:
+->first sort the array decreasingly
+->try to implement chk function where we first try to put mid amount of elemets in temp array and rem element in rem vector and try to put all elements of rem 
+vector above the temp vector using the formula
+->if no elements left in rem vector that  means we can place all the element 
+so return true
+else return false
+
