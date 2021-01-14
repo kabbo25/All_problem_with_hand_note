@@ -1,0 +1,23 @@
+Problem statement:
+->given a even length string with equal number of zero's and one's 
+->we can reverse any substring of s
+->so that we can make this alternating
+or there will be consecutive two zero's or one's
+->we have to find minimum number of swaps
+
+Observation:
+->first we have swap that substring which starting element and ending element will be different otherwise swap will be not beneficial
+->and swap actually means that
+if length of substring is n then 
+we actuall swap change(n/2) elements 
+and if n is odd then(n/2) element will be unchanged
+->key observation is no matter what substring we reverse maximum we can change one pair 
+like if string is [11110000]->[10001110]->before operation there is 3 one's pair but now after one operation there is 2 pair which have adjacent one's
+after second operation it will become [10101110] now we have only 1 pair which have adjacent one 
+->formally we can say that we have n consetive same characters we need (n-1)swap
+which is actually nothing but number of pairs
+
+
+Implementation:
+->we actually count the adjacent pair's of consecutive one's and zero's 
+->answer will be maximum of (pair of zero's and pair of one's)
