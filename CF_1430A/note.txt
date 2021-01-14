@@ -1,0 +1,24 @@
+Problem statement:
+->There is a building which consists 
+three apartments with size 3,5,7 and each apartement has one window
+->Monocarp see the building from outside and count n windows
+->we have to print a possbile configaration of building so that it satisfy the condition of n windows
+->other wise we have print -1
+Observation:
+->we can write this mathmatically and we have to find the solution
+3x+5y+7z=n and we have find the value of x,y,z and if we don't find any such solutions then we print -1
+if we set y and z equal 0 then our equal look like this
+3x=n where x=(n/3) so n can be big as (1000/3) =333 which is max value of 3 this way we can see 
+max value y is (1000/5)=200 and 
+but we don't need the third value coz 
+for this formula 
+ 7z = (n - (3 * i + 5 * j));
+ so z=(n-(3*i+5*j))/7
+ so it have to divisible by or there is no answer 
+
+
+Implementation:
+->we will run three nested loops 
+of and try all possible combination of x,y
+
+->if we won't find any such combination  we will print -1
