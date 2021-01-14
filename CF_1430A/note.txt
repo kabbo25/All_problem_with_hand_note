@@ -14,7 +14,7 @@ but we don't need the third value coz
 for this formula 
  7z = (n - (3 * i + 5 * j));
  so z=(n-(3*i+5*j))/7
- so it have to divisible by or there is no answer 
+ so it have to divisible by 7 or there is no answer 
 
 
 Implementation:
