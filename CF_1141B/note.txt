@@ -1,0 +1,11 @@
+Problem_statement:
+->we have to find maximum continuous segement which consist one's in a circular array coz when one day ends another day starts 
+
+
+Observation:
+->we make array circular by traversing the array from [1.....2*n] where n is the size of array
+->we mode every element by (n+1) coz when array is out of bound it will be zero
+
+Implementation:
+->when we find 1 we increasement the count and when we found 0 assing the count equal zero coz we want continuos segment of one's if some occur between them it is not allowed
+->our answer will be maximum of all counts
