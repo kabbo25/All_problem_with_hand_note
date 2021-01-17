@@ -48,7 +48,7 @@ the pathe `1->2->4`
 - For this case our answer will be 3
 
 # Code
-```
+```c++
 /*
 * @Author: kabbo
 * @Date:   2020-06-24 08:40:07
