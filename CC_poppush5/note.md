@@ -135,4 +135,4 @@ int main() {
     return 0;
 }
 ```
-># Happy coding :satisfied:
+># Happy coding :smile:
