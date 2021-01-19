@@ -14,7 +14,7 @@
 
 <div align="center"><img src="g1.jpg">
 </div>
-- So we need to add every number except that number to make it equal so we choose ith number in the ith operation so that we don't add <pre class="tab"> i to the ith number </pre>
+- So we need to add every number except that number to make it equal so we choose ith number in the ith operation so that we don't add <pre class="tab"> <mark>i to the ith number</mark> </pre>
 
 # Implementation
 - To construct the array just choose ith element in the i'th operation so that i don't add in i'th element
